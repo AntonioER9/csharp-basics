@@ -12,3 +12,4 @@
 /Users/Antonio/Documents/2 Areas/💻 IT /Backend/C#/console-test/obj/Debug/net8.0/console-test.pdb
 /Users/Antonio/Documents/2 Areas/💻 IT /Backend/C#/console-test/obj/Debug/net8.0/console-test.genruntimeconfig.cache
 /Users/Antonio/Documents/2 Areas/💻 IT /Backend/C#/console-test/obj/Debug/net8.0/ref/console-test.dll
+/Users/Antonio/Documents/2 Areas/💻 IT /Backend/C#/console-test/obj/Debug/net8.0/console-test.sourcelink.json

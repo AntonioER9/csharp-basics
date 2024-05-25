@@ -1,41 +1,34 @@
-﻿
+﻿using System.Text.Json;
 
-var numbers = new MyList<int>(5);
-var names = new MyList<string>(5);
 
-numbers.Add(1);
-numbers.Add(2);
-numbers.Add(3);
-numbers.Add(4);
-numbers.Add(5);
-numbers.Add(6);
-
-Console.WriteLine(numbers.GetContent());
-
-public class MyList<T>
+var antonio = new People()
 {
-  private List<T> _list;
-  private int _limit;
+  Name = "Antonio",
+  Age = 29,
+};
 
-  public MyList(int limit) {
-    _limit = limit;
-    _list = new List<T>();
-  }
+People.Get(); //static
 
-  public void Add(T element)
-  {
-    if (_list.Count < _limit)
-    {
-      _list.Add(element);
-    }
-  }
+string json = JsonSerializer.Serialize(antonio);
 
-  public string GetContent()
-  {
-    string content = "";
-    foreach (var element in _list){
-      content += element+",";
-    }
-    return content;
-  }
+Console.WriteLine(json);
+
+string myJson = @"{
+  ""Name"":""Pedro"",
+  ""Age"":34
+}";
+
+People? juan = JsonSerializer.Deserialize<People>(myJson);
+Console.WriteLine(juan?.Name);
+Console.WriteLine(juan?.Age);
+
+
+public class People
+{
+  public string Name { get; set; }
+  public int Age { get; set; }
+
+  public static string Get() => "Hola";
+  // public static string Get() {return "hola"};
+
 }
